@@ -107,15 +107,3 @@
 * Отсутствует финальная интеграция некоторых модулей.
 * Настройки Nginx в Dockerfile требуют адаптации при использовании Vue Router в режиме `history`.
 ```
-
-### Как быстро применить это у себя в терминале:
-1. Открой файл через консоль: `nano README.md`
-2. Вставь этот текст.
-3. Сохрани (`Ctrl + O`, затем `Enter`) и выйди (`Ctrl + X`).
-4. Отправь изменения на GitHub:
-   ```bash
-   git add README.md
-   git commit -m "docs: add realistic README"
-   git push origin main
-   ```
-
