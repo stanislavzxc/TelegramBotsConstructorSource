@@ -1,38 +1,120 @@
-# TelegramBotsConstructor
+# TelegramBotsConstructorSource
 
-This template should help get you started developing with Vue 3 in Vite.
+## ⚠️ Статус проекта: Исходный код (Как есть)
+> **Важно:** Данный проект **не вошел в продакшн**. Код является «сырым», местами корявым, экспериментальным и на текущий момент представляет собой исключительно архив исходников (Source Code) без финальной полировки. 
 
-## Recommended IDE Setup
+Репозиторий создан для сохранения наработок. Pull Request'ы и исправления приветствуются, но проект поставляется *as is* (без гарантий стабильной работы).
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Recommended Browser Setup
+## 🚀 Описание проекта
+**TelegramBotsConstructor** — это исходный код конструктора Telegram-ботов. Идея проекта заключалась в создании инструмента, который позволяет пользователям собирать, настраивать и запускать собственных ботов через визуальный интерфейс или конфигурационные файлы без глубоких знаний программирования.
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+### Что внутри (Стек технологий):
+* **Frontend:** Vue.js / vue-flow (для интерфейса управления и создания структуры ботов)
+* **Контейнеризация:** Docker / Dockerfile (для быстрой развертки)
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 🛠️ Развертывание в Docker (Локально)
 
-## Project Setup
+Для сборки и запуска frontend-части в изолированном контейнере выполните следующие команды:
 
-```sh
-npm install
+1. **Сборка production-образа (Multi-stage build):**
+   ```bash
+   docker build -t telegram-bots-constructor .
+   ```
+
+2. **Запуск контейнера (на порту 8080):**
+   ```bash
+   docker run -it -p 8080:80 --rm --name bots-constructor-app telegram-bots-constructor
+   ```
+
+---
+
+
+./
+├── index.html
+├── jsconfig.json
+├── package.json
+├── package-lock.json
+├── public
+│   └── favicon.ico
+├── README.md
+├── src
+│   ├── App.vue
+│   ├── assets
+│   │   └── exit.png
+│   ├── components
+│   │   ├── CustomNode.vue
+│   │   ├── JustMessage.vue
+│   │   ├── MyIcon.vue
+│   │   ├── SideBar.vue
+│   │   ├── TheAdd.vue
+│   │   ├── TheAnswer.vue
+│   │   ├── TheApplication.vue
+│   │   ├── TheButtons.vue
+│   │   ├── TheChain.vue
+│   │   ├── TheCondition.vue
+│   │   ├── TheContacts.vue
+│   │   ├── TheCreate.vue
+│   │   ├── TheEmailSend.vue
+│   │   ├── TheEmail.vue
+│   │   ├── TheFast.vue
+│   │   ├── TheInputs.vue
+│   │   ├── TheMenu.vue
+│   │   ├── TheModal.vue
+│   │   ├── TheName.vue
+│   │   ├── TheNot.vue
+│   │   ├── TheNumber.vue
+│   │   ├── ThePay.vue
+│   │   ├── TheSend.vue
+│   │   ├── TheStart.vue
+│   │   ├── TheText.vue
+│   │   ├── TheToggle2.vue
+│   │   ├── TheToggle.vue
+│   │   └── TheVal.vue
+│   ├── initial-elements.js
+│   ├── main.css
+│   ├── main.js
+│   └── stores
+│       └── Mystore.js
+└── vite.config.js
+
+
+## 📂 Как запустить в режиме разработки (Dev)
+
+Если вам нужно поковыряться в коде и запустить проект локально с hot-reload:
+
+1. Установите зависимости:
+   ```bash
+   npm install
+   ```
+2. Запустите локальный сервер:
+   ```bash
+   npm run serve
+   ```
+   *или*
+   ```bash
+   npm run dev
+   ``` (в зависимости от версии Vue/Vite)
+
+---
+
+## 🛑 Известные проблемы и TODO
+* Код требует масштабного рефакторинга (много "костылей" и временных решений).
+* Отсутствует финальная интеграция некоторых модулей.
+* Настройки Nginx в Dockerfile требуют адаптации при использовании Vue Router в режиме `history`.
 ```
 
-### Compile and Hot-Reload for Development
+### Как быстро применить это у себя в терминале:
+1. Открой файл через консоль: `nano README.md`
+2. Вставь этот текст.
+3. Сохрани (`Ctrl + O`, затем `Enter`) и выйди (`Ctrl + X`).
+4. Отправь изменения на GitHub:
+   ```bash
+   git add README.md
+   git commit -m "docs: add realistic README"
+   git push origin main
+   ```
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
