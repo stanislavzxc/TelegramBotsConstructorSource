@@ -33,10 +33,9 @@
 ## 💡 Why This Project Matters
 
 This constructor demonstrates my ability to:
-- 🎨 Build **complex visual editors** (drag-and-drop, node-based)
-- 📱 Create **responsive interfaces** that work on any device
+- 🎨 Build **complex visual editors** (node && egdes-based,)
 - 🧩 Design **modular component systems** (20+ reusable UI blocks)
-- ⚡ Integrate **state management** with Pinia/Vuex
+- ⚡ Integrate **state management** with Pinia and json-data about nodes and egdes
 - 🐳 Containerize applications with **Docker**
 
 
