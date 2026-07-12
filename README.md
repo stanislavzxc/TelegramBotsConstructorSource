@@ -1,39 +1,35 @@
-# TelegramBotsConstructorSource
+TelegramBotsConstructorSource
+⚠️ Project Status: Source Code (As-Is)
 
-## ⚠️ Статус проекта: Исходный код (Как есть)
-> **Важно:** Данный проект **не вошел в продакшн**. Код является «сырым», местами корявым, экспериментальным и на текущий момент представляет собой исключительно архив исходников (Source Code) без финальной полировки. 
+    Important: This project did not reach production. The code is "raw," messy in places, experimental, and currently represents solely an archive of source code without final polish.
 
-Репозиторий создан для сохранения наработок. Pull Request'ы и исправления приветствуются, но проект поставляется *as is* (без гарантий стабильной работы).
+This repository was created to preserve work-in-progress. Pull Requests and fixes are welcome, but the project is provided as is (without guarantees of stable operation).
+🚀 Project Description
 
----
+TelegramBotsConstructor is the source code for a Telegram bot constructor. The project's idea was to create a tool that allows users to assemble, configure, and launch their own bots through a visual interface or configuration files without deep programming knowledge.
+What's Inside (Tech Stack):
 
-## 🚀 Описание проекта
-**TelegramBotsConstructor** — это исходный код конструктора Telegram-ботов. Идея проекта заключалась в создании инструмента, который позволяет пользователям собирать, настраивать и запускать собственных ботов через визуальный интерфейс или конфигурационные файлы без глубоких знаний программирования.
+    Frontend: Vue.js / vue-flow (for the management interface and bot structure creation)
 
-### Что внутри (Стек технологий):
-* **Frontend:** Vue.js / vue-flow (для интерфейса управления и создания структуры ботов)
-* **Контейнеризация:** Docker / Dockerfile (для быстрой развертки)
+    Containerization: Docker / Dockerfile (for quick deployment)
 
----
+🛠️ Docker Deployment (Local)
 
-## 🛠️ Развертывание в Docker (Локально)
+To build and run the frontend part in an isolated container, execute the following commands:
 
-Для сборки и запуска frontend-части в изолированном контейнере выполните следующие команды:
+    Build the production image (Multi-stage build):
+    bash
 
-1. **Сборка production-образа (Multi-stage build):**
-   ```bash
-   docker build -t telegram-bots-constructor .
-   ```
+docker build -t telegram-bots-constructor .
 
-2. **Запуск контейнера (на порту 8080):**
-   ```bash
-   docker run -it -p 8080:80 --rm --name bots-constructor-app telegram-bots-constructor
-   ```
+Run the container (on port 8080):
+bash
 
----
+docker run -it -p 8080:80 --rm --name bots-constructor-app telegram-bots-constructor
 
+📂 Project Structure
+text
 
-```
 ./
 ├── index.html
 ├── jsconfig.json
@@ -81,29 +77,32 @@
 │   └── stores
 │       └── Mystore.js
 └── vite.config.js
-```
 
-## 📂 Как запустить в режиме разработки (Dev)
+📂 How to Run in Development Mode (Dev)
 
-Если вам нужно поковыряться в коде и запустить проект локально с hot-reload:
+If you want to tinker with the code and run the project locally with hot-reload:
 
-1. Установите зависимости:
-   ```bash
-   npm install
-   ```
-2. Запустите локальный сервер:
-   ```bash
-   npm run serve
-   ```
-   *или*
-   ```bash
-   npm run dev
-   ``` (в зависимости от версии Vue/Vite)
+    Install dependencies:
+    bash
 
----
+npm install
 
-## 🛑 Известные проблемы и TODO
-* Код требует масштабного рефакторинга (много "костылей" и временных решений).
-* Отсутствует финальная интеграция некоторых модулей.
-* Настройки Nginx в Dockerfile требуют адаптации при использовании Vue Router в режиме `history`.
-```
+Start the local server:
+bash
+
+npm run serve
+
+or
+bash
+
+npm run dev
+``` (depending on Vue/Vite version)
+
+🛑 Known Issues and TODO
+
+    The code requires extensive refactoring (lots of "hacks" and temporary solutions).
+
+    Final integration of some modules is missing.
+
+    Nginx configuration in the Dockerfile needs adaptation when using Vue Router in history mode.
+
