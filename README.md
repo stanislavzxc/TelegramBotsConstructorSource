@@ -1,48 +1,47 @@
-TelegramBotsConstructorSource
-⚠️ Project Status: Source Code (As-Is)
+# TelegramBotsConstructorSource
 
-    Important: This project did not reach production. The code is "raw," messy in places, experimental, and currently represents solely an archive of source code without final polish.
+<p align="center">
+  <img src="https://shields.io" alt="Vue.js">
+  <img src="https://shields.io" alt="Vite">
+  <img src="https://shields.io" alt="Docker">
+  <img src="https://shields.io" alt="Status">
+</p>
 
-This repository was created to preserve work-in-progress. Pull Requests and fixes are welcome, but the project is provided as is (without guarantees of stable operation).
-🚀 Project Description
+⚠️ **Project Status: Source Code (As-Is)**
+> **Important:** This project did not reach production. The code is "raw," messy in places, experimental, and currently represents solely an archive of source code without final polish. 
+> 
+> This repository was created to preserve work-in-progress. Pull Requests and fixes are welcome, but the project is provided as is (without guarantees of stable operation).
 
-TelegramBotsConstructor is the source code for a Telegram bot constructor. The project's idea was to create a tool that allows users to assemble, configure, and launch their own bots through a visual interface or configuration files without deep programming knowledge.
-What's Inside (Tech Stack):
+---
 
-    Frontend: Vue.js / vue-flow (for the management interface and bot structure creation)
+## 🚀 Project Description
 
-    Containerization: Docker / Dockerfile (for quick deployment)
+**TelegramBotsConstructor** is the source code for a visual Telegram bot constructor. The main concept was to create an intuitive tool that allows users to assemble, configure, and launch their own Telegram bots through a visual interface or configuration files without deep programming knowledge.
 
-🛠️ Docker Deployment (Local)
+### 🛠️ Tech Stack & Features
+* **Frontend:** `Vue.js` & `vue-flow` (used for building the node-based visual management interface and bot logic structure).
+* **State Management:** `Pinia` / `Vuex` (located in `stores/Mystore.js`).
+* **Build Tool:** `Vite` for fast development and bundling.
+* **Containerization:** `Docker` (Multi-stage build support for quick production deployment).
 
-To build and run the frontend part in an isolated container, execute the following commands:
+---
 
-    Build the production image (Multi-stage build):
-    bash
+## 📂 Project Structure
 
-docker build -t telegram-bots-constructor .
-
-Run the container (on port 8080):
-bash
-
-docker run -it -p 8080:80 --rm --name bots-constructor-app telegram-bots-constructor
-
-📂 Project Structure
-text
-
+```text
 ./
 ├── index.html
 ├── jsconfig.json
 ├── package.json
 ├── package-lock.json
-├── public
+├── public/
 │   └── favicon.ico
 ├── README.md
-├── src
+├── src/
 │   ├── App.vue
-│   ├── assets
+│   ├── assets/
 │   │   └── exit.png
-│   ├── components
+│   ├── components/         # Visual builder blocks and UI nodes
 │   │   ├── CustomNode.vue
 │   │   ├── JustMessage.vue
 │   │   ├── MyIcon.vue
@@ -71,38 +70,52 @@ text
 │   │   ├── TheToggle2.vue
 │   │   ├── TheToggle.vue
 │   │   └── TheVal.vue
-│   ├── initial-elements.js
+│   ├── initial-elements.js # Mock/Initial state for vue-flow
 │   ├── main.css
 │   ├── main.js
-│   └── stores
+│   └── stores/
 │       └── Mystore.js
 └── vite.config.js
+```
 
-📂 How to Run in Development Mode (Dev)
+---
 
+## 💻 Getting Started
+
+### Local Development Mode (Dev)
 If you want to tinker with the code and run the project locally with hot-reload:
 
-    Install dependencies:
-    bash
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-npm install
+2. **Start the local development server:**
+   ```bash
+   npm run dev
+   # or 'npm run serve' depending on the lockfile environment
+   ```
 
-Start the local server:
-bash
+---
 
-npm run serve
+## 🐳 Docker Deployment
 
-or
-bash
+To build and run the frontend part in an isolated production-ready container:
 
-npm run dev
-``` (depending on Vue/Vite version)
+1. **Build the production image (Multi-stage build):**
+   ```bash
+   docker build -t telegram-bots-constructor .
+   ```
 
-🛑 Known Issues and TODO
+2. **Run the container (accessible on port 8080):**
+   ```bash
+   docker run -it -p 8080:80 --rm --name bots-constructor-app telegram-bots-constructor
+   ```
 
-    The code requires extensive refactoring (lots of "hacks" and temporary solutions).
+---
 
-    Final integration of some modules is missing.
+## 🛑 Known Issues and TODO
 
-    Nginx configuration in the Dockerfile needs adaptation when using Vue Router in history mode.
-
+- [ ] **Refactoring:** The code requires extensive refactoring (lots of "hacks" and temporary solutions).
+- [ ] **Features:** Final integration of some visual modules and nodes is missing.
+- [ ] **Docker / Nginx:** Nginx configuration in the `Dockerfile` needs adaptation if you plan to use Vue Router in history mode.
