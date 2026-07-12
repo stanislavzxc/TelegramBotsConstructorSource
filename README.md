@@ -1,11 +1,5 @@
 # TelegramBotsConstructorSource
 
-<p align="center">
-  <img src="https://shields.io" alt="Vue.js">
-  <img src="https://shields.io" alt="Vite">
-  <img src="https://shields.io" alt="Docker">
-  <img src="https://shields.io" alt="Status">
-</p>
 
 ⚠️ **Project Status: Source Code (As-Is)**
 > **Important:** This project did not reach production. The code is "raw," messy in places, experimental, and currently represents solely an archive of source code without final polish. 
