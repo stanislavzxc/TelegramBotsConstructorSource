@@ -1,5 +1,9 @@
 # TelegramBotsConstructorSource
 
+<p align="center">
+  <img src="./docs/sh.png" alt="Meract Platform Preview" width="100%">
+</p>
+
 
 ⚠️ **Project Status: Source Code (As-Is)**
 > **Important:** This project did not reach production. The code is "raw," messy in places, experimental, and currently represents solely an archive of source code without final polish. 
@@ -19,6 +23,11 @@
 * **Containerization:** `Docker` (Multi-stage build support for quick production deployment).
 
 ---
+
+
+<p align="center">
+  <img src="./docs/sh2.png" alt="Meract Platform Preview" width="100%">
+</p>
 
 ## 📂 Project Structure
 
