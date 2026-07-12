@@ -29,6 +29,17 @@
   <img src="./docs/sh2.png" alt="Meract Platform Preview" width="100%">
 </p>
 
+
+## 💡 Why This Project Matters
+
+This constructor demonstrates my ability to:
+- 🎨 Build **complex visual editors** (drag-and-drop, node-based)
+- 📱 Create **responsive interfaces** that work on any device
+- 🧩 Design **modular component systems** (20+ reusable UI blocks)
+- ⚡ Integrate **state management** with Pinia/Vuex
+- 🐳 Containerize applications with **Docker**
+
+
 ## 📂 Project Structure
 
 ```text
